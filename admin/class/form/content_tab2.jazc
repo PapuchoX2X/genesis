@@ -1,0 +1,197 @@
+<body class="easyui-layout">
+	
+	<div title="&nbsp; ADMINISTRACION WEB<span id='exit' style='float:right;margin-right:10px;cursor:pointer;'>SALIR</span>" data-options="region:'north',collapsible:false" style="height:40px;">
+	
+	</div>
+	
+	<div data-options="region:'south',collapsible:'false'" style="height:50px;">
+		<center><p>All Right Reserved &copy; 2023 by SIA-WEB Development</p></center>
+	</div>
+	
+	<div data-options="	region:'west',collapsed:false" style="background:#585858;width:180px;padding:5px;">
+		
+		<br/>
+		<a href="./home.php" class="easyui-linkbutton" style="width:100%;text-align:left;margin-top:1px;" data-options="size:'large',iconAlign:'top'">
+			<span>
+				<div style="margin-top:1px;margin-bottom:-5px;">
+					<i class="fa fa-home fa-lg" aria-hidden="true"></i>
+					<b>&nbsp;INICIO</b>
+				</div>
+			</span>
+		</a>
+		
+		<br/>
+		<br/>
+		<a href="./tab_1.php" class="easyui-linkbutton" style="width:100%;text-align:left;margin-top:-5px;" data-options="size:'large',iconAlign:'top'">
+			<span>
+				<div style="margin-top:1px;margin-bottom:-5px;">
+					<i class="fa fa-th fa-lg" aria-hidden="true"></i>
+					<b>&nbsp;NOSOTRAS</b>
+				</div>
+			</span>
+		</a>
+		
+		<br/>
+		<br/>
+		<a href="./tab_2.php" class="easyui-linkbutton" style="width:100%;text-align:left;margin-top:-5px;" data-options="size:'large',iconAlign:'top',selected:'true'">
+			<span>
+				<div style="margin-top:1px;margin-bottom:-5px;">
+					<i class="fa fa-th fa-lg" aria-hidden="true"></i>
+					<b>&nbsp;ACERCA DE</b>
+				</div>
+			</span>
+		</a>
+		
+		<br/>
+		<br/>
+		<a href="./tab_3.php" class="easyui-linkbutton" style="width:100%;text-align:left;margin-top:-5px;" data-options="size:'large',iconAlign:'top'">
+			<span>
+				<div style="margin-top:1px;margin-bottom:-5px;">
+					<i class="fa fa-th fa-lg" aria-hidden="true"></i>
+					<b>&nbsp;GALERIA</b>
+				</div>
+			</span>
+		</a>
+		
+		<br/>
+		<br/>
+		<a href="./tab_4.php" class="easyui-linkbutton" style="width:100%;text-align:left;margin-top:-5px;" data-options="size:'large',iconAlign:'top'">
+			<span>
+				<div style="margin-top:1px;margin-bottom:-5px;">
+					<i class="fa fa-th fa-lg" aria-hidden="true"></i>
+					<b>&nbsp;AMBIENTES</b>
+				</div>
+			</span>
+		</a>
+		
+		<br/>
+		<br/>
+		<a href="./tab_5.php" class="easyui-linkbutton" style="width:100%;text-align:left;margin-top:-5px;" data-options="size:'large',iconAlign:'top'">
+			<span>
+				<div style="margin-top:1px;margin-bottom:-5px;">
+					<i class="fa fa-th fa-lg" aria-hidden="true"></i>
+					<b>&nbsp;CONTACTOS</b>
+				</div>
+			</span>
+		</a>
+		
+		<br/>
+		<br/>
+		<a href="./user.php" class="easyui-linkbutton" style="width:100%;text-align:left;margin-top:-5px;" data-options="size:'large',iconAlign:'top'">
+			<span>
+				<div style="margin-top:1px;margin-bottom:-5px;">
+					<i class="fa fa-user fa-lg" aria-hidden="true"></i>
+					<b>&nbsp;USUARIOS</b>
+				</div>
+			</span>
+		</a>
+		
+	</div>
+
+	<div data-options="region:'center',collapsible:true" style="padding:5px;">
+			
+		<div class="easyui-tabs" data-options="tabPosition:'top', plain:true, narrow:false, pill:false, justified:true" style="width:100%;height:100%">
+			<div title="Titulo" style="padding:10px">
+					
+				<table id="dg_titlea" title="<div>GESTION TITULO <span style='float:right;'>ADMINISTRADOR:&nbsp;&nbsp; %ADMIN% &nbsp;</span></div>" style=";width:100%;height:100%;"
+						url="./../ajax/action.admin.php?option=titlea" toolbar="#toolbar_titlea" pagination="true"
+						rownumbers="true" fitColumns="true" singleSelect="true" nowrap="false">
+					<thead>
+						<tr>
+							 														 	 	 				 
+							<th field="codetitlea" hidden="true" width="50">codetitlea</th>
+							
+							<th field="titleaname" width="100" align="left">TITULO</th>
+					
+						</tr>
+					</thead>
+				</table>
+				<div id="toolbar_titlea">
+					
+					<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" plain="true" onclick="new_titlea()"><i class="fa fa-plus-square fa-lg"></i> Nuevo </a>
+					<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" plain="true" onclick="edit_titlea()"><i class="fa fa-pencil-square fa-lg"></i> Editar </a>
+					<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" plain="true" onclick="remove_titlea()"><i class="fa fa-minus-square fa-lg"></i> Eliminar </a>
+					
+					<span style="margin-left:10px;">Buscar:</span>
+					<input id="name_titlea" class="easyui-searchbox" data-options="prompt:'Por favor ingrese un nombre',searcher:dosearch_titlea" style="width:300px;margin-top:9px;"></input>
+					
+					<span style="margin-left:10px;"></span>
+					<a href="#" class="easyui-linkbutton" iconCls="" plain="true" onclick="reload_titlea()">&nbsp;<i class="fa fa-refresh fa-lg"></i>&nbsp;</a>
+					
+				<br/>
+				</div>
+				
+			</div>
+			
+			<div title="Parrafos" style="padding:10px">
+				
+				<table id="dg_texta" title="<div>GESTION PARRAFOS <span style='float:right;'>ADMINISTRADOR:&nbsp;&nbsp; %ADMIN% &nbsp;</span></div>" style=";width:100%;height:100%;"
+						url="./../ajax/action.admin.php?option=texta" toolbar="#toolbar_texta" pagination="true"
+						rownumbers="true" fitColumns="true" singleSelect="true" nowrap="false">
+					<thead>
+						<tr>
+							 	 	 	 				 
+							<th field="codetexta" hidden="true" width="50">codetexta</th>
+							<th field="codetitlea" hidden="true" width="50">codetitlea</th>
+							
+							<th field="textatitle" width="200" fixed="true" align="center">PARRAFO</th>
+							<th field="textasection" width="300" align="left">PARRAFO</th>
+							
+						</tr>
+					</thead>
+				</table>
+				<div id="toolbar_texta">
+					
+					<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" plain="true" onclick="new_texta()"><i class="fa fa-plus-square fa-lg"></i> Nuevo </a>
+					<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" plain="true" onclick="edit_texta()"><i class="fa fa-pencil-square fa-lg"></i> Editar </a>
+					<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" plain="true" onclick="remove_texta()"><i class="fa fa-minus-square fa-lg"></i> Eliminar </a>
+					
+					<span style="margin-left:10px;">Buscar:</span>
+					<input id="name_texta" class="easyui-searchbox" data-options="prompt:'Por favor ingrese un nombre',searcher:dosearch_texta" style="width:300px;margin-top:9px;"></input>
+					
+					<span style="margin-left:10px;"></span>
+					<a href="#" class="easyui-linkbutton" iconCls="" plain="true" onclick="reload_texta()">&nbsp;<i class="fa fa-refresh fa-lg"></i>&nbsp;</a>
+					
+				<br/>
+				</div>
+
+			</div>
+			
+			<div title="Imagenes" style="padding:10px">
+				
+				<table id="dg_imga" title="<div>GESTION IMAGENES <span style='float:right;'>ADMINISTRADOR:&nbsp;&nbsp; %ADMIN% &nbsp;</span></div>" style=";width:100%;height:100%;"
+						url="./../ajax/action.admin.php?option=imga" toolbar="#toolbar_imga" pagination="true"
+						rownumbers="true" fitColumns="true" singleSelect="true" nowrap="false">
+					<thead>
+						<tr>
+														 
+							<th field="codeimga" hidden="true" width="50">codeimga</th>
+							
+							<th field="imgatitle" width="300" fixed="true" align="center">TITULO</th>
+							<th field="infoimga" width="150" fixed="true" align="center">IMAGEN</th>
+					
+						</tr>
+					</thead>
+				</table>
+				<div id="toolbar_imga">
+					
+					<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" plain="true" onclick="new_imga()"><i class="fa fa-plus-square fa-lg"></i> Nuevo </a>
+					<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" plain="true" onclick="edit_imga()"><i class="fa fa-pencil-square fa-lg"></i> Editar </a>
+					<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" plain="true" onclick="remove_imga()"><i class="fa fa-minus-square fa-lg"></i> Eliminar </a>
+					
+					<span style="margin-left:10px;">Buscar:</span>
+					<input id="name_imga" class="easyui-searchbox" data-options="prompt:'Por favor ingrese un nombre',searcher:dosearch_imga" style="width:300px;margin-top:9px;"></input>
+					
+					<span style="margin-left:10px;"></span>
+					<a href="#" class="easyui-linkbutton" iconCls="" plain="true" onclick="reload_imga()">&nbsp;<i class="fa fa-refresh fa-lg"></i>&nbsp;</a>
+					
+				<br/>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+</body>
+
+	

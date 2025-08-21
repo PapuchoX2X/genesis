@@ -1,0 +1,177 @@
+<div id="form_course" class="easyui-dialog" style="width:900px;padding:10px 20px" modal="true"
+			closed="true" buttons="#course_buttons">
+		<form id="f_course" method="post" novalidate enctype="multipart/form-data">
+			
+			<table>
+				<tr>
+					<td>
+									
+						<div class="fitem-1">
+							<label style="font-size:15px;">Categoria:</label>
+							<input id="codecategory" name="codecategory" class="easyui-combobox" required="true" editable="false"
+								data-options="  valueField:'codecategory',
+												textField:'categoryname',
+												/*panelHeight:'auto',*/
+												url:'./../ajax/action.category.php?option=show',
+												onSelect: function(rec){
+													var url_cat = './../ajax/action.sub.php?option=show_code&codecategory='+rec.codecategory;
+													$('#codesubcategory').combobox('reload', url_cat);
+												}
+											 " 
+							style="width:250px;height:25px;">
+						</div>
+									
+						<div class="fitem-1">
+							<label style="font-size:15px;">SubCategoria:</label>
+							<input id="codesubcategory" name="codesubcategory" class="easyui-combobox" required="true" editable="false"
+								data-options="  valueField:'codesubcategory',
+												textField:'subcategoryname',
+												/*panelHeight:'auto',*/
+												url:'./../ajax/action.sub.php?option=show_code'
+											 " 
+							style="width:250px;height:25px;">
+						</div>
+									
+						<div class="fitem-1">
+							<label style="font-size:15px;">Inicio:</label>
+							<input id="courseinit" name="courseinit" class="easyui-textbox" required="true" style="width:250px;height:25px;">
+						</div>
+						
+					</td>
+					<td>
+									
+						<div class="fitem-1" style="margin-left:10px;">
+							<label style="font-size:15px;">Nombre:</label>
+							<input id="coursename" name="coursename" class="easyui-textbox" required="true" multiline="true" style="width:350px;height:75px;">
+						</div>
+						
+					</td>
+				</tr>
+				<tr>
+					<td>
+									
+						<div class="fitem-1">
+							<label style="font-size:15px;">Fecha Inicio:</label>
+							<input id="coursedateinit" name="coursedateinit" class="easyui-datebox" required="true" data-options="formatter:myformatter,parser:myparser" style="width:250px;height:25px;">
+						</div>
+									
+						<div class="fitem-1">
+							<label style="font-size:15px;">Fecha Fin:</label>
+							<input id="coursedateend" name="coursedateend" class="easyui-datebox" required="true" data-options="formatter:myformatter,parser:myparser" style="width:250px;height:25px;">
+						</div>
+								
+						<div class="fitem-1">
+							<label style="font-size:15px;">Dias:</label>
+							<!--<input id="courseday" name="courseday" class="easyui-textbox" required="true" style="width:250px;height:25px;">-->
+							<input id="courseday" name="courseday[]" class="easyui-combobox" required="true" editable="false"
+								data-options="  valueField:'value',
+												textField:'label',
+												data: [{value: 'LUNES',label: 'LUNES'},
+													   {value: 'MARTES',label: 'MARTES'},
+													   {value: 'MIERCOLES',label: 'MIERCOLES'},
+													   {value: 'JUEVES',label: 'JUEVES'},
+													   {value: 'VIERNES',label: 'VIERNES'},
+													   {value: 'SABADO',label: 'SABADO'},
+													   {value: 'DOMINGO',label: 'DOMINGO'}
+													  ],
+												 multiple:true,
+												panelHeight:'auto'
+											 " 
+							style="width:250px;height:25px;">
+						</div>
+						
+						<div class="fitem-1">
+							<label style="font-size:15px;">Hora:</label>
+							<input id="coursetime" name="coursetime" class="easyui-textbox" required="true" style="width:250px;height:25px;">
+						</div>
+						
+						<div class="fitem-1">
+							<label style="font-size:15px;">Hora Inicio:</label>
+							<input id="coursetimeinit" name="coursetimeinit" class="easyui-timespinner" required="true" style="width:250px;height:25px;">
+						</div>
+						
+						<div class="fitem-1">
+							<label style="font-size:15px;">Hora Fin:</label>
+							<input id="coursetimeend" name="coursetimeend" class="easyui-timespinner" required="true" style="width:250px;height:25px;">
+						</div>
+						
+						<div class="fitem-1">
+							<label style="font-size:15px;">Modalidad:</label>
+							<!--<input id="coursemode" name="coursemode" class="easyui-textbox" required="true" style="width:250px;height:25px;">-->
+							<select id="coursemode" name="coursemode" class="easyui-combobox" required="true" editable="false" data-options="panelHeight:'auto'" style="width:250px;height:25px;">
+								<option value="VIRTUAL">VIRTUAL</option>
+								<option value="PRECENCIAL">PRECENCIAL</option>
+								<option value="MIXTA">MIXTA</option>
+							</select>
+						</div>
+						
+						<div class="fitem-1">
+							<label style="font-size:15px;">Telf/Cel:</label>
+							<input id="coursephone" name="coursephone" class="easyui-textbox" required="true" style="width:250px;height:25px;">
+						</div>
+									
+						<div class="fitem-1">
+							<label style="font-size:15px;">Precio:</label>
+							<input id="courseprice" name="courseprice" class="easyui-numberbox" required="true" data-options="min:0,precision:2" style="width:250px;height:25px;">
+						</div>
+						
+						<div class="fitem-1">
+							<label style="font-size:15px;">Dscto:</label>
+							<input id="coursedscto" name="coursedscto" class="easyui-textbox" required="true" style="width:250px;height:25px;">
+						</div>
+									
+						<div class="fitem-1">
+							<label style="font-size:15px;">Avalado Por:</label>
+							<!--<input id="courseinstitute" name="courseinstitute" class="easyui-textbox" required="true" style="width:250px;height:25px;">-->
+							<input id="courseinstitute" name="courseinstitute[]" class="easyui-combobox" required="true" editable="false"
+								data-options="  valueField:'institutionsname',
+												textField:'institutionsname',
+												multiple:true,
+												multiline:true,
+												/*panelHeight:'auto',*/
+												url:'./../ajax/action.institutions.php?option=show'
+											 " 
+							style="width:250px;height:75px;">
+						</div>
+						
+					</td>
+					<td>
+									
+						<div class="fitem-1" style="margin-left:10px;">
+							<label style="font-size:15px;">Descripcion:</label>
+							<input id="coursedesc" name="coursedesc" class="easyui-textbox" required="true" multiline="true" style="width:350px;height:250px;">
+						</div>
+						
+						<div class="fitem-1" style="margin-left:10px;">
+							<label style="font-size:15px;">Footer:</label>
+							<input id="coursefooter" name="coursefooter" class="easyui-textbox" style="width:250px;height:25px;">
+						</div>
+						
+						<div class="fitem-1" style="margin-left:10px;">
+							<label style="font-size:15px;">Estrellas:</label>
+							<input id="coursestar" name="coursestar" class="easyui-numberbox" required="true" data-options="min:0,precision:2" style="width:250px;height:25px;">
+						</div>
+									
+						<div class="fitem-1" style="margin-left:10px;">
+							<label style="font-size:15px;">Imagen:</label>
+							<input type="file" name="courseimg" id="courseimg" style="width:250px;"/>
+						</div>
+						
+					</td>
+				</tr>
+				<tr>
+					<td>
+						
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+			</table>
+			
+		</form>
+	</div>
+	<div id="course_buttons">
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" onclick="save_course()" style="width:90px"><i class="fa fa-check fa-lg" aria-hidden="true"></i>&nbsp;Guardar</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" onclick="javascript:$('#form_course').dialog('close')" style="width:90px"><i class="fa fa-times fa-lg" aria-hidden="true"></i>&nbsp;Cancelar</a>
+	</div>

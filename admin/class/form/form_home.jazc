@@ -1,0 +1,134 @@
+<div id="form_company" class="easyui-dialog" style="width:560px;padding:10px 20px"
+			closed="true" buttons="#company_buttons">
+		<form id="f_company" method="post" novalidate>
+			
+			<div class="fitem-3">
+				<label>Nombre:</label>
+				<input id="companyname" name="companyname" class="easyui-textbox" required="true" style="width:300px;height:25px;">
+			</div>
+			
+			<div class="fitem-3">
+				<label>Razon Social:</label>
+				<input id="companybusinessname" name="companybusinessname" class="easyui-textbox" required="true" style="width:300px;height:25px;">
+			</div>
+			
+			<div class="fitem-3">
+				<label>NIT:</label>
+				<input id="companynit" name="companynit" class="easyui-numberbox" required="true" style="width:300px;height:25px;">
+			</div>
+			
+			<div class="fitem-3">
+				<label>Munucipalidad:</label>
+				<input id="companymunicipality" name="companymunicipality" class="easyui-textbox" required="true" style="width:300px;height:25px;">
+			</div>
+			
+			<div class="fitem-3">
+				<label>Telefono:</label>
+				<input id="companyphone" name="companyphone" class="easyui-numberbox" required="true" style="width:300px;height:25px;">
+			</div>
+			
+			<div class="fitem-3">
+				<label>Direccion:</label>
+				<input id="companyaddress" name="companyaddress" class="easyui-textbox" required="true" style="width:300px;height:25px;">
+			</div>
+			
+			<div class="fitem-3">
+				<label>Codigo Ambiente:</label>
+				<!--<input id="companycodeambient" name="companycodeambient" class="easyui-textbox" required="true" style="width:300px;height:25px;">-->
+				<select id="companycodeambient" name="companycodeambient" class="easyui-combobox" required="true" editable="false" data-options="panelHeight:'auto'" style="width:300px;height:25px;">
+					<option value="1">PRODUCCION</option>
+					<option value="2">PRUEBAS</option>
+				</select>
+			</div>
+			
+			<div class="fitem-3">
+				<label>Codigo Documento Sector:</label>
+				<!--<input id="companycodedocumentsector" name="companycodedocumentsector" class="easyui-textbox" required="true" style="width:300px;height:25px;">-->
+				<input id="companycodedocumentsector" name="companycodedocumentsector" class="easyui-combobox" editable="false" required="true"
+					data-options="  valueField:'tdscodeclassifier',
+									textField:'tdsdescription',
+									url:'./../ajax/action.show.php?option=typedocumentsector'
+								 " 
+				style="width:300px;height:25px;">
+			</div>
+			
+			<div class="fitem-3">
+				<label>Codigo Emision:</label>
+				<!--<input id="companycodeemission" name="companycodeemission" class="easyui-textbox" required="true" style="width:300px;height:25px;">-->
+				<input id="companycodeemission" name="companycodeemission" class="easyui-combobox" editable="false" required="true"
+					data-options="  valueField:'ticodeclassifier',
+									textField:'tidescription',
+									panelHeight:'auto',
+									url:'./../ajax/action.show.php?option=typeissuance'
+								 " 
+				style="width:300px;height:25px;">	
+			</div>
+			
+			<div class="fitem-3">
+				<label>Codigo Modalidad:</label>
+				<!--<input id="companycodemodality" name="companycodemodality" class="easyui-textbox" required="true" style="width:300px;height:25px;">-->
+				<select id="companycodemodality" name="companycodemodality" class="easyui-combobox" required="true" editable="false" data-options="panelHeight:'auto'" style="width:300px;height:25px;">
+					<option value="1">ELECTRÓNICA EN LÍNEA</option>
+				</select>
+			</div>
+			
+			<div class="fitem-3">
+				<label>Codigo Punto Venta:</label>
+				<input id="companycodepointsale" name="companycodepointsale" class="easyui-textbox" required="true" style="width:300px;height:25px;">
+			</div>
+			
+			<div class="fitem-3">
+				<label>Codigo Sistema:</label>
+				<input id="companycodesystem" name="companycodesystem" class="easyui-textbox" required="true" style="width:300px;height:25px;">
+			</div>
+			
+			<div class="fitem-3">
+				<label>Codigo Sucursal:</label>
+				<input id="companycodebranch" name="companycodebranch" class="easyui-textbox" required="true" style="width:300px;height:25px;">
+			</div>
+			
+			<div class="fitem-3">
+				<label>Tipo Factura Documento:</label>
+				<!--<input id="companytypeinvoicedocument" name="companytypeinvoicedocument" class="easyui-textbox" required="true" style="width:300px;height:25px;">-->
+				<input id="companytypeinvoicedocument" name="companytypeinvoicedocument" class="easyui-combobox" editable="false" required="true"
+					data-options="  valueField:'tfcodeclassifier',
+									textField:'tfdescripcion',
+									panelHeight:'auto',
+									url:'./../ajax/action.show.php?option=typesinvoice'
+								 " 
+				style="width:300px;height:25px;">	
+			</div>
+			
+			<div class="fitem-3">
+				<label>Codigo Metodo Pago:</label>
+				<!--<input id="companycodemethodpayment" name="companycodemethodpayment" class="easyui-textbox" required="true" style="width:300px;height:25px;">-->
+				<input id="companycodemethodpayment" name="companycodemethodpayment" class="easyui-combobox" editable="false" required="true"
+					data-options="  valueField:'tmpcodeclassifier',
+									textField:'tmpdescription',
+									url:'./../ajax/action.show.php?option=typemethodpayment'
+								 " 
+				style="width:300px;height:25px;">
+			</div>
+			
+			<div class="fitem-3">
+				<label>Codigo Moneda:</label>
+				<!--<input id="companycodecurrency" name="companycodecurrency" class="easyui-textbox" required="true" style="width:300px;height:25px;">-->
+				<input id="companycodecurrency" name="companycodecurrency" class="easyui-combobox" editable="false" required="true"
+					data-options="  valueField:'tccodeclassifier',
+									textField:'tcdescription',
+									url:'./../ajax/action.show.php?option=typecurrency'
+								 " 
+				style="width:300px;height:25px;">	
+			</div>
+			
+			<div class="fitem-3">
+				<label>Token:</label>
+				<input id="companytoken" name="companytoken" class="easyui-textbox" required="true" style="width:300px;height:25px;">
+			</div>
+			
+		</form>
+	</div>
+	<div id="company_buttons">
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" onclick="save_company()" style="width:90px"><i class="fa fa-check fa-lg" aria-hidden="true"></i>&nbsp;Guardar</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" onclick="javascript:$('#form_company').dialog('close')" style="width:90px"><i class="fa fa-times fa-lg" aria-hidden="true"></i>&nbsp;Cancelar</a>
+	</div>

@@ -1,0 +1,35 @@
+<div id="form_lesson" class="easyui-dialog" style="width:400px;padding:10px 20px" modal="true"
+			closed="true" buttons="#lesson_buttons">
+		<form id="f_lesson" method="post" novalidate enctype="multipart/form-data">
+			
+			<div class="fitem">
+				<label>Nro Clase:</label>
+				<input id="lessonnro" name="lessonnro" class="easyui-textbox" required="true" style="width:250px;height:25px;">
+			</div>
+			
+			<div class="fitem">
+				<label>Nombre:</label>
+				<input id="lessonname" name="lessonname" class="easyui-textbox" required="true" style="width:250px;height:25px;">
+			</div>
+			
+			<div class="fitem">
+				<label>Descripcion:</label>
+				<input id="lessondesc" name="lessondesc" class="easyui-textbox" required="true" multiline="true" style="width:250px;height:75px;">
+			</div>
+			
+			<div class="fitem">
+				<label>Url:</label>
+				<input id="lessonurl" name="lessonurl" class="easyui-textbox" required="true" style="width:250px;height:25px;">
+			</div>
+			
+			<div class="fitem">
+				<label>Url Doc:</label>
+				<input id="lessonurldoc" name="lessonurldoc" class="easyui-textbox" required="true" style="width:250px;height:25px;">
+			</div>
+			
+		</form>
+	</div>
+	<div id="lesson_buttons">
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" onclick="save_lesson()" style="width:90px"><i class="fa fa-check fa-lg" aria-hidden="true"></i>&nbsp;Guardar</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" onclick="javascript:$('#form_lesson').dialog('close')" style="width:90px"><i class="fa fa-times fa-lg" aria-hidden="true"></i>&nbsp;Cancelar</a>
+	</div>

@@ -1,0 +1,24 @@
+<main class="expand">
+  <div class="container">
+	<div class="col-4"></div>
+	<div class="col-4">
+	  <div class="card login-form">
+		<div class="text--center space-sm-inner">
+		  <img src="resource/images/logo_black.png" alt="txt_genesis" style="width:80%;margin-bottom:-25px;">
+		</div>
+		<form action="">
+		  <div class="card">
+			<label for="">Usuario:</label>
+			<input id="userlogin" type="text">
+		  </div>
+		  <div class="card">
+			<label for="">Contraseña:</label>
+			<input id="userpassword" type="password">
+		  </div>
+		  <input id="button-login"  type="button" value="Ingresar" class="main-button">
+		</form>
+	  </div>
+	</div>
+	<div class="col-4"></div>
+  </div>
+</main>

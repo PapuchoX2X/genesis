@@ -1,0 +1,27 @@
+<div id="form_imgg" class="easyui-dialog" style="width:380px;padding:10px 20px" modal="true"
+			closed="true" buttons="#imgg_buttons">
+		<form id="f_imgg" method="post" novalidate enctype="multipart/form-data">
+			
+			<div class="fitem">
+				<label>Titulo:</label>
+				<input id="codetitleg" name="codetitleg" class="easyui-combobox" required="true" editable="true"
+					data-options="  valueField:'codetitleg',
+									textField:'titlegname',
+									/*panelHeight:'auto',*/
+									url:'./../ajax/action.titleg.php?option=show'
+								 " 
+				style="width:220px;height:25px;">
+			</div>
+			
+			<div class="fitem">
+				<label>Imagen:</label>
+				<input type="file" name="imggname" id="imggname" style="width:220px;"/>
+			</div>
+			
+			
+		</form>
+	</div>
+	<div id="imgg_buttons">
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" onclick="save_imgg()" style="width:90px"><i class="fa fa-check fa-lg" aria-hidden="true"></i>&nbsp;Guardar</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" onclick="javascript:$('#form_imgg').dialog('close')" style="width:90px"><i class="fa fa-times fa-lg" aria-hidden="true"></i>&nbsp;Cancelar</a>
+	</div>

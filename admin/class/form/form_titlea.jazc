@@ -1,0 +1,15 @@
+<div id="form_titlea" class="easyui-dialog" style="width:400px;padding:10px 20px" modal="true"
+			closed="true" buttons="#titlea_buttons">
+		<form id="f_titlea" method="post" novalidate enctype="multipart/form-data">
+			
+			<div class="fitem">
+				<label>Titulo:</label>
+				<input id="titleaname" name="titleaname" class="easyui-textbox" required="true" style="width:250px;height:25px;">
+			</div>
+			
+		</form>
+	</div>
+	<div id="titlea_buttons">
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" onclick="save_titlea()" style="width:90px"><i class="fa fa-check fa-lg" aria-hidden="true"></i>&nbsp;Guardar</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" onclick="javascript:$('#form_titlea').dialog('close')" style="width:90px"><i class="fa fa-times fa-lg" aria-hidden="true"></i>&nbsp;Cancelar</a>
+	</div>

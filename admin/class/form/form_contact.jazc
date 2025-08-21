@@ -1,0 +1,35 @@
+<div id="form_contact" class="easyui-dialog" style="width:420px;padding:10px 20px"
+			closed="true" buttons="#contact_buttons">
+		<form id="f_contact" method="post" novalidate>
+			
+			<div class="fitem-1">
+				<label>Direccion:</label>
+				<input id="contactaddress" name="contactaddress" class="easyui-textbox" required="true" style="width:250px;height:25px;">
+			</div>
+			
+			<div class="fitem-1">
+				<label>Telefono:</label>
+				<input id="contactphone" name="contactphone" class="easyui-textbox" required="true" style="width:250px;height:25px;">
+			</div>
+			
+			<div class="fitem-1">
+				<label>Celular:</label>
+				<input id="contactcel" name="contactcel" class="easyui-textbox" required="true" style="width:250px;height:25px;">
+			</div>
+			
+			<div class="fitem-1">
+				<label>Parada Linea:</label>
+				<input id="contactline" name="contactline" class="easyui-textbox" required="true" style="width:250px;height:25px;">
+			</div>
+			
+			<div class="fitem-1">
+				<label>Ubicacion:</label>
+				<input id="contactlocation" name="contactlocation" class="easyui-textbox" required="true" style="width:250px;height:25px;">
+			</div>
+			
+		</form>
+	</div>
+	<div id="contact_buttons">
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" onclick="save_contact()" style="width:90px"><i class="fa fa-check fa-lg" aria-hidden="true"></i>&nbsp;Guardar</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" onclick="javascript:$('#form_contact').dialog('close')" style="width:90px"><i class="fa fa-times fa-lg" aria-hidden="true"></i>&nbsp;Cancelar</a>
+	</div>

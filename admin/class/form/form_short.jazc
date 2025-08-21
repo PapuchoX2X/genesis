@@ -1,0 +1,27 @@
+<div id="form_short" class="easyui-dialog" style="width:380px;padding:10px 20px" modal="true"
+			closed="true" buttons="#short_buttons">
+		<form id="f_short" method="post" novalidate enctype="multipart/form-data">
+			
+			<div class="fitem">
+				<label>Curso:</label>
+				<input id="codecourse" name="codecourse" class="easyui-combobox" editable="true" required="true"
+					data-options="  valueField:'codecourse',
+									textField:'coursename',
+									url:'./../ajax/action.course.php?option=show'
+								 " 
+				style="width:220px;height:25px;">	
+			
+			</div>
+			
+			<div class="fitem">
+				<label>Imagen:</label>
+				<input type="file" name="shortimg" id="shortimg" style="width:220px;"/>
+			</div>
+			
+			
+		</form>
+	</div>
+	<div id="short_buttons">
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" onclick="save_short()" style="width:90px"><i class="fa fa-check fa-lg" aria-hidden="true"></i>&nbsp;Guardar</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" onclick="javascript:$('#form_short').dialog('close')" style="width:90px"><i class="fa fa-times fa-lg" aria-hidden="true"></i>&nbsp;Cancelar</a>
+	</div>

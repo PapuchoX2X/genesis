@@ -1,0 +1,33 @@
+<div id="form_user" class="easyui-dialog" style="width:380px;padding:10px 20px"
+			closed="true" buttons="#user_buttons">
+		<form id="f_user" method="post" novalidate>
+			
+			<div class="fitem">
+				<label>Nombre:</label>
+				<input id="username" name="username" class="easyui-textbox" required="true" style="width:200px;height:25px;">
+			</div>
+			
+			<div class="fitem">
+				<label>Tipo:</label>
+				<select id="usertype" name="usertype" class="easyui-combobox" required="true" editable="false" data-options="panelHeight:'auto'" style="width:200px;height:25px;">
+					<option value="ADMINISTRADOR">ADMINISTRADOR</option>
+					<option value="CAJERO">CAJERO</option>
+				</select>
+			</div>
+			
+			<div class="fitem">
+				<label>Login:</label>
+				<input id="userlogin" name="userlogin" class="easyui-textbox" required="true" style="width:200px;height:25px;">
+			</div>
+			
+			<div class="fitem">
+				<label>Password:</label>
+				<input id="userpassword" name="userpassword" class="easyui-textbox" required="true" style="width:200px;height:20px;">
+			</div>
+			
+		</form>
+	</div>
+	<div id="user_buttons">
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" onclick="save_user()" style="width:90px"><i class="fa fa-check fa-lg" aria-hidden="true"></i>&nbsp;Guardar</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" onclick="javascript:$('#form_user').dialog('close')" style="width:90px"><i class="fa fa-times fa-lg" aria-hidden="true"></i>&nbsp;Cancelar</a>
+	</div>

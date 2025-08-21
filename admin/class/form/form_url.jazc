@@ -1,0 +1,15 @@
+<div id="form_url" class="easyui-dialog" style="width:400px;padding:10px 20px" modal="true"
+			closed="true" buttons="#url_buttons">
+		<form id="f_url" method="post" novalidate enctype="multipart/form-data">
+			
+			<div class="fitem">
+				<label>Url:</label>
+				<input id="urlname" name="urlname" class="easyui-textbox" required="true" style="width:250px;height:25px;">
+			</div>
+			
+		</form>
+	</div>
+	<div id="url_buttons">
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" onclick="save_url()" style="width:90px"><i class="fa fa-check fa-lg" aria-hidden="true"></i>&nbsp;Guardar</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" onclick="javascript:$('#form_url').dialog('close')" style="width:90px"><i class="fa fa-times fa-lg" aria-hidden="true"></i>&nbsp;Cancelar</a>
+	</div>

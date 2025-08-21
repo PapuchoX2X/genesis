@@ -1,0 +1,152 @@
+<body class="easyui-layout">
+	
+	<div title="&nbsp; SISTEMA DE ADMINISTRACION WEB<span id='exit' style='float:right;margin-right:10px;cursor:pointer;'>SALIR</span>" data-options="region:'north',collapsible:false" style="height:40px;">
+	
+	</div>
+	
+	<div data-options="region:'south',collapsible:'false'" style="height:50px;">
+		<center><p>All Right Reserved &copy; 2023 by SIA-WEB Development</p></center>
+	</div>
+	
+	<div data-options="	region:'west',collapsed:false" style="background:#585858;width:180px;padding:5px;">
+		
+		<br/>
+		<a href="./home.php" class="easyui-linkbutton" style="width:100%;text-align:left;margin-top:1px;" data-options="size:'large',iconAlign:'top'">
+			<span>
+				<div style="margin-top:1px;margin-bottom:-5px;">
+					<i class="fa fa-home fa-lg" aria-hidden="true"></i>
+					<b>&nbsp;INICIO</b>
+				</div>
+			</span>
+		</a>
+		
+		<br/>
+		<br/>
+		<a href="./about.php" class="easyui-linkbutton" style="width:100%;text-align:left;margin-top:-5px;" data-options="size:'large',iconAlign:'top'">
+			<span>
+				<div style="margin-top:1px;margin-bottom:-5px;">
+					<i class="fa fa-th-large fa-lg" aria-hidden="true"></i>
+					<b>&nbsp;ACERCA DE</b>
+				</div>
+			</span>
+		</a>
+		
+		<br/>
+		<br/>
+		<a href="./category.php" class="easyui-linkbutton" style="width:100%;text-align:left;margin-top:-5px;" data-options="size:'large',iconAlign:'top',selected:'true'">
+			<span>
+				<div style="margin-top:1px;margin-bottom:-5px;">
+					<i class="fa fa-list fa-lg" aria-hidden="true"></i>
+					<b>&nbsp;CATEGORIA</b>
+				</div>
+			</span>
+		</a>
+		
+		<br/>
+		<br/>
+		<a href="./course.php" class="easyui-linkbutton" style="width:100%;text-align:left;margin-top:-5px;" data-options="size:'large',iconAlign:'top'">
+			<span>
+				<div style="margin-top:1px;margin-bottom:-5px;">
+					<i class="fa fa-th fa-lg" aria-hidden="true"></i>
+					<b>&nbsp;CURSOS</b>
+				</div>
+			</span>
+		</a>
+		
+		<br/>
+		<br/>
+		<a href="./coursed.php" class="easyui-linkbutton" style="width:100%;text-align:left;margin-top:-5px;" data-options="size:'large',iconAlign:'top'">
+			<span>
+				<div style="margin-top:1px;margin-bottom:-5px;">
+					<i class="fa fa-th fa-lg" aria-hidden="true"></i>
+					<b>&nbsp;CURSOS DOC</b>
+				</div>
+			</span>
+		</a>
+		
+		<br/>
+		<br/>
+		<a href="./person.php" class="easyui-linkbutton" style="width:100%;text-align:left;margin-top:-5px;" data-options="size:'large',iconAlign:'top'">
+			<span>
+				<div style="margin-top:1px;margin-bottom:-5px;">
+					<i class="fa fa-users fa-lg" aria-hidden="true"></i>
+					<b>&nbsp;ESTUDIANTES</b>
+				</div>
+			</span>
+		</a>
+		
+		<br/>
+		<br/>
+		<a href="./persond.php" class="easyui-linkbutton" style="width:100%;text-align:left;margin-top:-5px;" data-options="size:'large',iconAlign:'top'">
+			<span>
+				<div style="margin-top:1px;margin-bottom:-5px;">
+					<i class="fa fa-users fa-lg" aria-hidden="true"></i>
+					<b>&nbsp;DOCENTES</b>
+				</div>
+			</span>
+		</a>
+		
+		<br/>
+		<br/>
+		<a href="./paid.php" class="easyui-linkbutton" style="width:100%;text-align:left;margin-top:-5px;" data-options="size:'large',iconAlign:'top'">
+			<span>
+				<div style="margin-top:1px;margin-bottom:-5px;">
+					<i class="fa fa-money fa-lg" aria-hidden="true"></i>
+					<b>&nbsp;PAGOS</b>
+				</div>
+			</span>
+		</a>
+		
+		<br/>
+		<br/>
+		<a href="./user.php" class="easyui-linkbutton" style="width:100%;text-align:left;margin-top:-5px;" data-options="size:'large',iconAlign:'top'">
+			<span>
+				<div style="margin-top:1px;margin-bottom:-5px;">
+					<i class="fa fa-user fa-lg" aria-hidden="true"></i>
+					<b>&nbsp;USUARIOS</b>
+				</div>
+			</span>
+		</a>
+		
+	</div>
+
+	<div data-options="region:'center',collapsible:true" style="padding:5px;">
+		
+		<table id="dg_category" title="<div>GESTION CATEGORIA <span style='float:right;'>ADMINISTRADOR:&nbsp;&nbsp; %ADMIN% &nbsp;</span></div>" style=";width:100%;height:100%;"
+				url="./../ajax/action.admin.php?option=category" toolbar="#toolbar_category" pagination="true"
+				rownumbers="true" fitColumns="true" singleSelect="true" nowrap="false">
+			<thead>
+				<tr>
+																									 
+					<th field="codecategory" hidden="true" width="50">codecategory</th>
+					<!--
+					<th field="categoryimage" width="120" fixed="true" align="center">IMAGEN</th>
+					-->
+					<th field="categoryname" width="100" align="left">NOMBRE CATEGORIA</th>
+			
+				</tr>
+			</thead>
+		</table>
+		<div id="toolbar_category">
+			
+			<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" plain="true" onclick="new_category()"><i class="fa fa-plus-square fa-lg"></i> Nuevo </a>
+			<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" plain="true" onclick="edit_category()"><i class="fa fa-pencil-square fa-lg"></i> Editar </a>
+			<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" plain="true" onclick="remove_category()"><i class="fa fa-minus-square fa-lg"></i> Eliminar </a>
+			
+			<span style="margin-left:10px;">Buscar:</span>
+			<input id="name_category" class="easyui-searchbox" data-options="prompt:'Nombre',searcher:dosearch_category" style="width:300px;margin-top:9px;"></input>
+			
+			<span style="margin-left:10px;"></span>
+			<a href="#" class="easyui-linkbutton" iconCls="" plain="true" onclick="reload_category()">&nbsp;<i class="fa fa-refresh fa-lg"></i>&nbsp;</a>
+			
+			<span style="margin-left:10px;"></span>
+			<a href="#" class="easyui-linkbutton" iconCls="" plain="true" onclick="show_sub()">&nbsp;<i class="fa fa-desktop  fa-lg"></i> SubCategorias </a>
+			
+		<br/>
+		</div>
+				
+	</div>
+				
+</body>
+
+	

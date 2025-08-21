@@ -1,0 +1,26 @@
+<div id="form_text" class="easyui-dialog" style="width:450px;padding:10px 20px" modal="true"
+			closed="true" buttons="#text_buttons">
+		<form id="f_text" method="post" novalidate enctype="multipart/form-data">
+			
+			<div class="fitem">
+				<label>Titulo:</label>
+				<input id="codetitlet" name="codetitle" class="easyui-combobox" required="true" editable="false"
+					data-options="  valueField:'codetitle',
+									textField:'titlename',
+									/*panelHeight:'auto',*/
+									url:'./../ajax/action.title.php?option=show'
+								 " 
+				style="width:300px;height:25px;">
+			</div>
+			
+			<div class="fitem">
+				<label>Parrafo:</label>
+				<input id="textsection" name="textsection" class="easyui-textbox" required="true" multiline="true" style="width:300px;height:250px;">
+			</div>
+			
+		</form>
+	</div>
+	<div id="text_buttons">
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" onclick="save_text()" style="width:90px"><i class="fa fa-check fa-lg" aria-hidden="true"></i>&nbsp;Guardar</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" onclick="javascript:$('#form_text').dialog('close')" style="width:90px"><i class="fa fa-times fa-lg" aria-hidden="true"></i>&nbsp;Cancelar</a>
+	</div>

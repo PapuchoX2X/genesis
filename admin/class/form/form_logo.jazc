@@ -1,0 +1,16 @@
+<div id="form_logo" class="easyui-dialog" style="width:380px;padding:10px 20px" modal="true"
+			closed="true" buttons="#logo_buttons">
+		<form id="f_logo" method="post" novalidate enctype="multipart/form-data">
+			
+			<div class="fitem">
+				<label>Imagen:</label>
+				<input type="file" name="logoimg" id="logoimg" style="width:220px;"/>
+			</div>
+			
+			
+		</form>
+	</div>
+	<div id="logo_buttons">
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" onclick="save_logo()" style="width:90px"><i class="fa fa-check fa-lg" aria-hidden="true"></i>&nbsp;Guardar</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="" onclick="javascript:$('#form_logo').dialog('close')" style="width:90px"><i class="fa fa-times fa-lg" aria-hidden="true"></i>&nbsp;Cancelar</a>
+	</div>
